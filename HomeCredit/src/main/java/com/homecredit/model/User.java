@@ -12,6 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ * @author Nana Febriana
+ */
+
 @Entity
 @Table(name = "user")
 public class User implements Serializable {

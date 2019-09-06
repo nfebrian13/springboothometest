@@ -12,31 +12,40 @@ import org.apache.logging.log4j.Logger;
 import com.homecredit.dto.ApiResult;
 import com.homecredit.service.ModuleService;
 
+/**
+ * @author Nana Febriana
+ */
+
 @RestController
 @RequestMapping("/module")
 public class ModuleController {
 
 	private static final Logger logger = LogManager.getLogger(ModuleController.class);
-	
+
 	@Autowired
 	private ModuleService joinQueryService;
 
 	@GetMapping("/user/{id}")
 	public ApiResult getDeptEmployeesCrossJoinById(@PathVariable(value = "id") Long id) {
+		
 		ApiResult apiResult = new ApiResult();
+		
 		try {
-			  // pre-java 8
-	        if (logger.isDebugEnabled()) {
-	            logger.debug("Hello ", joinQueryService.fetchModuleListById(id));
-	            apiResult.setmodules(joinQueryService.fetchModuleListById(id));
-	        }
-			
+
+			if (logger.isDebugEnabled()) {
+				logger.debug("Hello ", joinQueryService.fetchModuleListById(id));
+				apiResult.setmodules(joinQueryService.fetchModuleListById(id));
+			}
+
 		} catch (Exception e) {
+
 			System.out.println(e.getMessage());
 			e.printStackTrace();
+
 		}
+
 		return apiResult;
+
 	}
-	
-	
+
 }

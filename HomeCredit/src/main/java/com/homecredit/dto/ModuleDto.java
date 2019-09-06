@@ -1,5 +1,9 @@
 package com.homecredit.dto;
 
+/**
+ * @author Nana Febriana
+ */
+
 public class ModuleDto {
 
 	private String moduleName;

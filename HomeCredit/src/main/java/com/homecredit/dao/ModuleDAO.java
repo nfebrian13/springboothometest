@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 import com.homecredit.dto.ModuleDto;
 import com.homecredit.repository.ModuleRepository;
 
+/**
+ * @author Nana Febriana
+ */
+
 @Component
 public class ModuleDAO {
 

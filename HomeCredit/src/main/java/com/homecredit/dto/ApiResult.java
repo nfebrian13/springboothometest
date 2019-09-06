@@ -1,5 +1,9 @@
 package com.homecredit.dto;
 
+/**
+ * @author Nana Febriana
+ */
+
 public class ApiResult {
 
 	protected Object modules = "";

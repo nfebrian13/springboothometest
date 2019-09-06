@@ -10,6 +10,10 @@ import java.util.List;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+/**
+ * @author Nana Febriana
+ */
+
 public interface ModuleRepository extends JpaRepository<Module, Integer> {
 
 	@Query("SELECT new com.homecredit.dto.ModuleDto(d.moduleName, d.moduleOrder) "
