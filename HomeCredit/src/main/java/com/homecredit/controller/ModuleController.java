@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.homecredit.dto.ApiResult;
 import com.homecredit.service.ModuleService;
 
@@ -13,6 +16,8 @@ import com.homecredit.service.ModuleService;
 @RequestMapping("/module")
 public class ModuleController {
 
+	private static final Logger logger = LogManager.getLogger(ModuleController.class);
+	
 	@Autowired
 	private ModuleService joinQueryService;
 
@@ -20,11 +25,18 @@ public class ModuleController {
 	public ApiResult getDeptEmployeesCrossJoinById(@PathVariable(value = "id") Long id) {
 		ApiResult apiResult = new ApiResult();
 		try {
-			apiResult.setmodules(joinQueryService.fetchModuleListById(id));
+			  // pre-java 8
+	        if (logger.isDebugEnabled()) {
+	            logger.debug("Hello ", joinQueryService.fetchModuleListById(id));
+	            apiResult.setmodules(joinQueryService.fetchModuleListById(id));
+	        }
+			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 		return apiResult;
 	}
+	
+	
 }

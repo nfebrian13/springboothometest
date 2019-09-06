@@ -6,3 +6,31 @@
 [DEBUG] 2019-09-06 21:54:58.859 [restartedMain] ApplicationClass - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
 [INFO ] 2019-09-06 21:54:58.860 [restartedMain] ApplicationClass - No active profile set, falling back to default profiles: default
 [INFO ] 2019-09-06 21:55:03.116 [restartedMain] ApplicationClass - Started ApplicationClass in 4.508 seconds (JVM running for 5.516)
+[INFO ] 2019-09-06 22:00:19.776 [restartedMain] ApplicationClass - Starting ApplicationClass on DESKTOP-U7I9Q7E with PID 10000 (C:\Users\acer\git\springboothometest\HomeCredit\target\classes started by acer in C:\Users\acer\git\springboothometest\HomeCredit)
+[DEBUG] 2019-09-06 22:00:19.776 [restartedMain] ApplicationClass - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2019-09-06 22:00:19.776 [restartedMain] ApplicationClass - No active profile set, falling back to default profiles: default
+[INFO ] 2019-09-06 22:00:20.715 [restartedMain] ApplicationClass - Started ApplicationClass in 0.994 seconds (JVM running for 323.114)
+[INFO ] 2019-09-06 22:01:56.174 [restartedMain] ApplicationClass - Starting ApplicationClass on DESKTOP-U7I9Q7E with PID 10000 (C:\Users\acer\git\springboothometest\HomeCredit\target\classes started by acer in C:\Users\acer\git\springboothometest\HomeCredit)
+[DEBUG] 2019-09-06 22:01:56.174 [restartedMain] ApplicationClass - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2019-09-06 22:01:56.174 [restartedMain] ApplicationClass - No active profile set, falling back to default profiles: default
+[INFO ] 2019-09-06 22:01:56.945 [restartedMain] ApplicationClass - Started ApplicationClass in 0.82 seconds (JVM running for 419.346)
+[DEBUG] 2019-09-06 22:02:05.550 [http-nio-8080-exec-2] ModuleController - Hello from Log4j 2 - num : 1
+[INFO ] 2019-09-06 22:05:10.909 [restartedMain] ApplicationClass - Starting ApplicationClass on DESKTOP-U7I9Q7E with PID 10000 (C:\Users\acer\git\springboothometest\HomeCredit\target\classes started by acer in C:\Users\acer\git\springboothometest\HomeCredit)
+[DEBUG] 2019-09-06 22:05:10.909 [restartedMain] ApplicationClass - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2019-09-06 22:05:10.909 [restartedMain] ApplicationClass - No active profile set, falling back to default profiles: default
+[INFO ] 2019-09-06 22:05:11.688 [restartedMain] ApplicationClass - Started ApplicationClass in 0.819 seconds (JVM running for 614.089)
+[DEBUG] 2019-09-06 22:05:24.866 [http-nio-8080-exec-2] ModuleController - Hello from Log4j 2 - num : 1
+[INFO ] 2019-09-06 22:10:27.398 [restartedMain] ApplicationClass - Starting ApplicationClass on DESKTOP-U7I9Q7E with PID 10000 (C:\Users\acer\git\springboothometest\HomeCredit\target\classes started by acer in C:\Users\acer\git\springboothometest\HomeCredit)
+[DEBUG] 2019-09-06 22:10:27.398 [restartedMain] ApplicationClass - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2019-09-06 22:10:27.399 [restartedMain] ApplicationClass - No active profile set, falling back to default profiles: default
+[INFO ] 2019-09-06 22:10:28.173 [restartedMain] ApplicationClass - Started ApplicationClass in 0.817 seconds (JVM running for 930.573)
+[DEBUG] 2019-09-06 22:10:34.513 [http-nio-8080-exec-2] ModuleController - Hello from Log4j 2 - num : [DeptEmpDto [moduleName=Promo, moduleOrder=1], DeptEmpDto [moduleName=News, moduleOrder=2], DeptEmpDto [moduleName=FlashSale, moduleOrder=3], DeptEmpDto [moduleName=Category, moduleOrder=4], DeptEmpDto [moduleName=News, moduleOrder=5]]
+[INFO ] 2019-09-06 22:11:40.544 [restartedMain] ApplicationClass - Starting ApplicationClass on DESKTOP-U7I9Q7E with PID 10000 (C:\Users\acer\git\springboothometest\HomeCredit\target\classes started by acer in C:\Users\acer\git\springboothometest\HomeCredit)
+[DEBUG] 2019-09-06 22:11:40.544 [restartedMain] ApplicationClass - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2019-09-06 22:11:40.544 [restartedMain] ApplicationClass - No active profile set, falling back to default profiles: default
+[INFO ] 2019-09-06 22:11:41.207 [restartedMain] ApplicationClass - Started ApplicationClass in 0.699 seconds (JVM running for 1003.621)
+[INFO ] 2019-09-06 22:11:59.239 [restartedMain] ApplicationClass - Starting ApplicationClass on DESKTOP-U7I9Q7E with PID 10000 (C:\Users\acer\git\springboothometest\HomeCredit\target\classes started by acer in C:\Users\acer\git\springboothometest\HomeCredit)
+[DEBUG] 2019-09-06 22:11:59.239 [restartedMain] ApplicationClass - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2019-09-06 22:11:59.239 [restartedMain] ApplicationClass - No active profile set, falling back to default profiles: default
+[INFO ] 2019-09-06 22:11:59.842 [restartedMain] ApplicationClass - Started ApplicationClass in 0.65 seconds (JVM running for 1022.252)
+[DEBUG] 2019-09-06 22:12:12.573 [http-nio-8080-exec-2] ModuleController - Hello 
