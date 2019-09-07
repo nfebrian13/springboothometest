@@ -17,7 +17,7 @@ import com.homecredit.service.ModuleService;
  */
 
 @RestController
-@RequestMapping("/module")
+@RequestMapping("/user")
 public class ModuleController {
 
 	private static final Logger logger = LogManager.getLogger(ModuleController.class);
@@ -25,7 +25,7 @@ public class ModuleController {
 	@Autowired
 	private ModuleService joinQueryService;
 
-	@GetMapping("/user/{id}")
+	@GetMapping("/module/{id}")
 	public ApiResult getDeptEmployeesCrossJoinById(@PathVariable(value = "id") Long id) {
 		
 		ApiResult apiResult = new ApiResult();

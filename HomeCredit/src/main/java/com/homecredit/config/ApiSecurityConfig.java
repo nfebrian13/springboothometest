@@ -1,7 +1,9 @@
 package com.homecredit.config;
 
 import com.homecredit.enums.Authoritiy;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -40,8 +42,11 @@ public class ApiSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.csrf().disable().authorizeRequests().antMatchers("/user/count")
-				.permitAll().antMatchers("/user/profile")
+		http.csrf().disable().authorizeRequests()
+				.antMatchers(HttpMethod.GET, "/user/module/*").permitAll() // added
+//				.antMatchers("/user/**").authenticated()				   // added
+				.antMatchers("/user/count").permitAll()
+				.antMatchers("/user/profile")
 				.hasRole(Authoritiy.USER.toString()).antMatchers("/user/**")
 				.hasRole(Authoritiy.ADMIN.toString()).and().httpBasic()
 				.authenticationEntryPoint(entryPoint).and().exceptionHandling()
