@@ -23,18 +23,19 @@ public class ModuleController {
 	private static final Logger logger = LogManager.getLogger(ModuleController.class);
 
 	@Autowired
-	private ModuleService joinQueryService;
+	private ModuleService moduleService;
 
+	
 	@GetMapping("/module/{id}")
-	public ApiResult getDeptEmployeesCrossJoinById(@PathVariable(value = "id") Long id) {
+	public ApiResult getModuleListByUserDetailId(@PathVariable(value = "id") Long id) {
 		
 		ApiResult apiResult = new ApiResult();
 		
 		try {
 
 			if (logger.isDebugEnabled()) {
-				logger.debug("Hello ", joinQueryService.fetchModuleListById(id));
-				apiResult.setmodules(joinQueryService.fetchModuleListById(id));
+				logger.debug("Hello ", moduleService.fetchModuleListByUserDetailId(id));
+				apiResult.setmodules(moduleService.fetchModuleListByUserDetailId(id));
 			}
 
 		} catch (Exception e) {

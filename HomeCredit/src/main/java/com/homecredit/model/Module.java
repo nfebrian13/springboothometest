@@ -37,11 +37,6 @@ public class Module implements Serializable {
 	private int moduleOrder;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id", insertable = false, updatable = false)
-	@Fetch(FetchMode.JOIN)
-	private User user;
-	
-	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_detail_id", insertable = false, updatable = false)
 	@Fetch(FetchMode.JOIN)
 	private UserDetail userDetail;
@@ -68,14 +63,6 @@ public class Module implements Serializable {
 
 	public void setModuleOrder(int moduleOrder) {
 		this.moduleOrder = moduleOrder;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
 	}
 
 	public UserDetail getUserDetail() {

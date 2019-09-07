@@ -16,10 +16,10 @@ import com.homecredit.repository.ModuleRepository;
 public class ModuleDAO {
 
 	@Autowired
-	private ModuleRepository employeeRepository;
+	private ModuleRepository moduleRepository;
 
-	public List<ModuleDto> fetchModuleListById(Long id) {
-		List<ModuleDto> list = employeeRepository.fetchModuleListById(id);
+	public List<ModuleDto> fetchModuleListByUserDetailId(Long id) {
+		List<ModuleDto> list = moduleRepository.fetchModuleListByUserDetailId(id);
 		return list;
 	}
 }

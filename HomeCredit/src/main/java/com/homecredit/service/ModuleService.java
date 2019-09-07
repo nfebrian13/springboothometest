@@ -18,8 +18,8 @@ public class ModuleService {
 	@Autowired
 	private ModuleDAO moduleDao;
 
-	public List<ModuleDto> fetchModuleListById(Long id) {
-		List<ModuleDto> list = moduleDao.fetchModuleListById(id);
+	public List<ModuleDto> fetchModuleListByUserDetailId(Long id) {
+		List<ModuleDto> list = moduleDao.fetchModuleListByUserDetailId(id);
 		return list;
 	}
 }
