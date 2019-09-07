@@ -16,8 +16,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class CustomBasicAuthenticationEntryPoint extends
-		BasicAuthenticationEntryPoint {
+public class CustomBasicAuthenticationEntryPoint extends BasicAuthenticationEntryPoint {
 
 	private static String REALM = "Restful Spring Security Application";
 

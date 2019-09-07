@@ -28,8 +28,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 		response.setStatus(HttpServletResponse.SC_FORBIDDEN);
 		response.addHeader("WWW-Authenticate", "Basic realm=\"" + REALM + "\"");
 		PrintWriter writer = response.getWriter();
-		writer.println("HTTP Status 403 : "
-				+ accessDeniedException.getMessage());
+		writer.println("HTTP Status 403 : " + accessDeniedException.getMessage());
 
 	}
 

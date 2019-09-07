@@ -16,7 +16,6 @@ import javax.persistence.OneToOne;
  */
 
 @Entity
-//@Table(name = "module")
 public class UserDetail implements Serializable {
 
 	private static final long serialVersionUID = 1L;
