@@ -40,6 +40,11 @@ public class Module implements Serializable {
 	@JoinColumn(name = "user_id", insertable = false, updatable = false)
 	@Fetch(FetchMode.JOIN)
 	private User user;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "user_detail_id", insertable = false, updatable = false)
+	@Fetch(FetchMode.JOIN)
+	private UserDetail userDetail;
 
 	public long getId() {
 		return id;
@@ -72,4 +77,13 @@ public class Module implements Serializable {
 	public void setUser(User user) {
 		this.user = user;
 	}
+
+	public UserDetail getUserDetail() {
+		return userDetail;
+	}
+
+	public void setUserDetail(UserDetail userDetail) {
+		this.userDetail = userDetail;
+	}
+	
 }

@@ -5,10 +5,12 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 /**
@@ -32,10 +34,14 @@ public class UserDetail implements Serializable {
 	@JoinColumn(name = "user_authentication_id")
 	private Authentication authentication;
 
+	@OneToMany(targetEntity = Module.class, mappedBy = "id", orphanRemoval = false, fetch = FetchType.LAZY)
+	private Set<Module> modules;
+
 	public UserDetail() {
 	}
 
-	public UserDetail(String name, int age, String username, String password, Set<Role> roles) {
+	public UserDetail(String name, int age, String username, String password,
+			Set<Role> roles) {
 		this.name = name;
 		this.age = age;
 		this.authentication = new Authentication(username, password, roles);
@@ -73,6 +79,14 @@ public class UserDetail implements Serializable {
 
 	public void setAuthentication(Authentication authentication) {
 		this.authentication = authentication;
+	}
+
+	public Set<Module> getModules() {
+		return modules;
+	}
+
+	public void setModules(Set<Module> modules) {
+		this.modules = modules;
 	}
 
 	@Override
