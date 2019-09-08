@@ -82,4 +82,5 @@ public class UserManagedService {
 	public void deleteAllUsers() {
 		userRepository.deleteAll();
 	}
+	
 }

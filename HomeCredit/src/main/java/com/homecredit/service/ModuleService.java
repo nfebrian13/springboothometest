@@ -17,7 +17,7 @@ public class ModuleService {
 
 	@Autowired
 	private ModuleRepository moduleRepository;
-
+	
 	public List<ModuleDto> fetchModuleListByUserDetailId(Long id) {
 		List<ModuleDto> list = moduleRepository.fetchModuleListByUserDetailId(id);
 		return list;

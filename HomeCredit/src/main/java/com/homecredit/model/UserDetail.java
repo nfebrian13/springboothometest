@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,7 +23,8 @@ public class UserDetail implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", unique = true, nullable = false)
 	private long id;
 
 	private String name;
@@ -34,7 +35,9 @@ public class UserDetail implements Serializable {
 	@JoinColumn(name = "user_authentication_id")
 	private Authentication authentication;
 
-	@OneToMany(targetEntity = Module.class, mappedBy = "id", orphanRemoval = false, fetch = FetchType.LAZY)
+//	@OneToMany(targetEntity = Module.class, mappedBy = "id", orphanRemoval = false, fetch = FetchType.LAZY)
+	@OneToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "user_detail_id")
 	private Set<Module> modules;
 
 	public UserDetail() {

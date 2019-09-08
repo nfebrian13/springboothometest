@@ -26,8 +26,8 @@ public class Module implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", unique = true, nullable = false)
 	private long id;
 
 	@Column(name = "module_name")
@@ -36,7 +36,7 @@ public class Module implements Serializable {
 	@Column(name = "module_order")
 	private int moduleOrder;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = UserDetail.class)
 	@JoinColumn(name = "user_detail_id", insertable = false, updatable = false)
 	@Fetch(FetchMode.JOIN)
 	private UserDetail userDetail;
