@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.homecredit.dao.ModuleDAO;
 import com.homecredit.dto.ModuleDto;
+import com.homecredit.repository.ModuleRepository;
 
 /**
  * @author Nana Febriana
@@ -16,10 +16,10 @@ import com.homecredit.dto.ModuleDto;
 public class ModuleService {
 
 	@Autowired
-	private ModuleDAO moduleDao;
+	private ModuleRepository moduleRepository;
 
 	public List<ModuleDto> fetchModuleListByUserDetailId(Long id) {
-		List<ModuleDto> list = moduleDao.fetchModuleListByUserDetailId(id);
+		List<ModuleDto> list = moduleRepository.fetchModuleListByUserDetailId(id);
 		return list;
 	}
 }
