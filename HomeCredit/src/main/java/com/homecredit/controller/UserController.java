@@ -29,22 +29,16 @@ public class UserController {
 	@Autowired
 	UserManagedService userService; // Service which will do all data retrieval/manipulation work
 
-	// -------------------User Profile Detail ---------------------------------
-
 	@RequestMapping(value = "/user/profile", method = RequestMethod.GET)
 	public HttpEntity<AbstractResponseDto> profileDetail(Principal principal) {
 		UserDto user = userService.findByUsername(principal.getName());
 		return ResponseUtil.success().body(user).send(HttpStatus.OK);
 	}
 
-	// -------------------Count user -------------------------------------------
-
 	@RequestMapping(value = "/user/count", method = RequestMethod.GET)
 	public HttpEntity<AbstractResponseDto> userCout() {
 		return ResponseUtil.success().body(userService.count()).send(HttpStatus.OK);
 	}
-
-	// -------------------Retrieve All Users -------------------------------------
 
 	@RequestMapping(value = "/user/", method = RequestMethod.GET)
 	public HttpEntity<AbstractResponseDto> listAllUsers() {
@@ -56,8 +50,6 @@ public class UserController {
 		return ResponseUtil.success().body(users).message("User list fetched successfully !!!").send(HttpStatus.OK);
 	}
 
-	// -------------------Retrieve Single User -------------------------------------
-
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
 	public ResponseEntity<AbstractResponseDto> getUser(@PathVariable("id") long id) {
 		UserDto user = userService.findById(id);
@@ -67,8 +59,6 @@ public class UserController {
 		return ResponseUtil.success().body(user).message("User fetched successfully !!!").send(HttpStatus.OK);
 	}
 
-	// -------------------Create a User -----------------------------------------------
-
 	@RequestMapping(value = "/user/", method = RequestMethod.POST)
 	public ResponseEntity<AbstractResponseDto> createUser(@RequestBody AuthenticationDto user) {
 
@@ -76,8 +66,6 @@ public class UserController {
 
 		return ResponseUtil.success().body(user.detail()).message("User created successfully !!!").send(HttpStatus.CREATED);
 	}
-
-	// ------------------- Update a User ------------------------------------------------
 
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<AbstractResponseDto> updateUser(@PathVariable("id") long id, @RequestBody UserDto user) {
@@ -92,8 +80,6 @@ public class UserController {
 		return ResponseUtil.success().body(currentUser).message("User updated successfully !!!").send(HttpStatus.OK);
 	}
 
-	// ------------------- Delete a User -------------------------------------------------
-
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<AbstractResponseDto> deleteUser(@PathVariable("id") long id) {
 
@@ -106,8 +92,6 @@ public class UserController {
 		userService.deleteUserById(id);
 		return ResponseUtil.success().body(user).message("User deleted successfully !!!").send(HttpStatus.OK);
 	}
-
-	// ------------------- Delete All Users ----------------------------------------------
 
 	@RequestMapping(value = "/user/", method = RequestMethod.DELETE)
 	public ResponseEntity<AbstractResponseDto> deleteAllUsers() {
